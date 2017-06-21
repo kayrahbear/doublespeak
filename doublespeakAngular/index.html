@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Doublespeak</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="lib/node_modules/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/node_modules/angular-material/angular-material.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="Doublespeak">
+<header>
+    <nav>
+        <div class="nav-wrapper grey darken-2">
+            <a href="#" class="white-text brand-logo center">Welcome to Doublespeak</a>
+        </div>
+    </nav>
+</header>
+
+<div class="main" ng-view>
+</div>
+
+<!-- materialize, jQuery, and Angular links -->
+<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-aria/angular-aria.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-material/angular-material.min.js"></script>
+
+<!-- APP.JS -->
+<script type="text/javascript" src="app/app.js"></script>
+
+<!-- NG FACTORIES -->
+<script type="text/javascript" src="app/Factories/AuthFactory.js"></script>
+
+<!-- NG CONTROLLERS -->
+<script type="text/javascript" src="app/controllers/HomeCtrl.js"></script>
+
+
+</body>
+</html>

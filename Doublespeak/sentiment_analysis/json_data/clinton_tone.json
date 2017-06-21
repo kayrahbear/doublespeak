@@ -1,0 +1,95 @@
+{
+  "hillary_clinton": {
+    "tone_categories": [
+      {
+        "emotional_tones": [
+          {
+            "score": 0.092322,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.136221,
+            "tone_id": "disgust",
+            "tone_name": "Disgust"
+          },
+          {
+            "score": 0.074101,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.661275,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.16611,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "personality_tones": [
+          {
+            "score": 0.477369,
+            "tone_id": "openness_big5",
+            "tone_name": "Openness"
+          },
+          {
+            "score": 0.907709,
+            "tone_id": "conscientiousness_big5",
+            "tone_name": "Conscientiousness"
+          },
+          {
+            "score": 0.680884,
+            "tone_id": "extraversion_big5",
+            "tone_name": "Extraversion"
+          },
+          {
+            "score": 0.865871,
+            "tone_id": "agreeableness_big5",
+            "tone_name": "Agreeableness"
+          },
+          {
+            "score": 0.732664,
+            "tone_id": "emotional_range_big5",
+            "tone_name": "Emotional Range"
+          }
+        ]
+      }
+    ],
+    "words_and_sentiment": [
+      {
+        "most_used_words": [
+          "people",
+          "america",
+          "country",
+          "president",
+          "believe",
+          "going",
+          "working",
+          "together",
+          "young",
+          "trump",
+          "first",
+          "children",
+          "every",
+          "right",
+          "years",
+          "better",
+          "donald",
+          "families",
+          "family",
+          "americans"
+        ]
+      },
+      {
+        "negative_sentiment": 462,
+        "positive_sentiment": 122,
+        "confidence": 90.85616438356165
+      }
+    ]
+  }
+}

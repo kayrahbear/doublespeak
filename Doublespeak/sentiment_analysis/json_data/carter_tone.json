@@ -1,0 +1,95 @@
+{
+  "jimmy_carter": {
+    "tone_categories": [
+      {
+        "emotional_tones": [
+          {
+            "score": 0.122374,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.125001,
+            "tone_id": "disgust",
+            "tone_name": "Disgust"
+          },
+          {
+            "score": 0.077582,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.634606,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.568363,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "personality_tones": [
+          {
+            "score": 0.738393,
+            "tone_id": "openness_big5",
+            "tone_name": "Openness"
+          },
+          {
+            "score": 0.878712,
+            "tone_id": "conscientiousness_big5",
+            "tone_name": "Conscientiousness"
+          },
+          {
+            "score": 0.607243,
+            "tone_id": "extraversion_big5",
+            "tone_name": "Extraversion"
+          },
+          {
+            "score": 0.474868,
+            "tone_id": "agreeableness_big5",
+            "tone_name": "Agreeableness"
+          },
+          {
+            "score": 0.78956,
+            "tone_id": "emotional_range_big5",
+            "tone_name": "Emotional Range"
+          }
+        ]
+      }
+    ],
+    "words_and_sentiment": [
+      {
+        "most_used_words": [
+          "president",
+          "would",
+          "nation",
+          "people",
+          "peace",
+          "world",
+          "country",
+          "american",
+          "years",
+          "future",
+          "every",
+          "america",
+          "think",
+          "office",
+          "question",
+          "first",
+          "school",
+          "important",
+          "education",
+          "government"
+        ]
+      },
+      {
+        "negative_sentiment": 592,
+        "positive_sentiment": 200,
+        "confidence": 91.5909090909091
+      }
+    ]
+  }
+}
