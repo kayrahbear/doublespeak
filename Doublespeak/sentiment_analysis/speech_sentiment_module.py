@@ -26,10 +26,10 @@ def frequency_filter(data_set):
     filtered = [word for word in no_capitals if word not in stop_words]
     no_punct = [word for word in filtered if word not in punctuation]
     frequency = FreqDist(no_punct)
-    top_fifteen_words = frequency.most_common(50)
-    top_fifteen_just_words, top_word_count = map(list, zip(*top_fifteen_words))
-    top_fifteen_just_words = [word for word in top_fifteen_just_words if len(word) > 4]
-    return top_fifteen_just_words[:25]
+    top_fifty_words = frequency.most_common(50)
+    top_twenty_just_words, top_word_count = map(list, zip(*top_fifty_words))
+    top_twenty_just_words = [word for word in top_twenty_just_words if len(word) > 4]
+    return top_twenty_just_words[:20]
 
 
 def overall_sentiment(sentiment_decisions):

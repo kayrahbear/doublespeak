@@ -1,0 +1,95 @@
+{
+  "ronald_reagan": {
+    "tone_categories": [
+      {
+        "personality_tones": [
+          {
+            "score": 0.101299,
+            "tone_id": "anger",
+            "tone_name": "Anger"
+          },
+          {
+            "score": 0.121826,
+            "tone_id": "disgust",
+            "tone_name": "Disgust"
+          },
+          {
+            "score": 0.090958,
+            "tone_id": "fear",
+            "tone_name": "Fear"
+          },
+          {
+            "score": 0.612698,
+            "tone_id": "joy",
+            "tone_name": "Joy"
+          },
+          {
+            "score": 0.536031,
+            "tone_id": "sadness",
+            "tone_name": "Sadness"
+          }
+        ]
+      },
+      {
+        "personality_tones": [
+          {
+            "score": 0.757515,
+            "tone_id": "openness_big5",
+            "tone_name": "Openness"
+          },
+          {
+            "score": 0.970554,
+            "tone_id": "conscientiousness_big5",
+            "tone_name": "Conscientiousness"
+          },
+          {
+            "score": 0.444502,
+            "tone_id": "extraversion_big5",
+            "tone_name": "Extraversion"
+          },
+          {
+            "score": 0.441071,
+            "tone_id": "agreeableness_big5",
+            "tone_name": "Agreeableness"
+          },
+          {
+            "score": 0.820535,
+            "tone_id": "emotional_range_big5",
+            "tone_name": "Emotional Range"
+          }
+        ]
+      }
+    ],
+    "words_and_sentiment": [
+      {
+        "most_used_words": [
+          "peace",
+          "people",
+          "world",
+          "american",
+          "government",
+          "administration",
+          "years",
+          "would",
+          "america",
+          "great",
+          "nation",
+          "president",
+          "carter",
+          "soviet",
+          "united",
+          "states",
+          "strength",
+          "federal",
+          "policy",
+          "defense"
+        ]
+      },
+      {
+        "negative_sentiment": 447,
+        "positive_sentiment": 299,
+        "confidence": 90.05361930294906
+      }
+    ]
+  }
+}
