@@ -49,71 +49,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m4" ng-repeat="candidate in candidates">
             <div class="card grey darken-2">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">1932 Election</span>
+                <div class="card-content white-text center-align">
+                    <span class="card-title">{{candidate.candidate_name}}</span>
+                    <p>{{candidate.party_name}} | {{candidate.election_year}} election</p>
                 </div>
                 <div class="card-action">
-                    <a class="white-text" href="#">Franklin D. Roosevelt (D)</a><br>
-                    <a class="white-text" href="#">Herbert Hoover (R)</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="card grey darken-2">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">1960 Election</span>
-                </div>
-                <div class="card-action">
-                    <a class="white-text" href="#">John F. Kennedy (D)</a><br>
-                    <a class="white-text" href="#">Richard Nixon (R)</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="card grey darken-2">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">1980 Election</span>
-                </div>
-                <div class="card-action">
-                    <a class="white-text" href="#">Jimmy Carter (D)</a><br>
-                    <a class="white-text" href="#">Ronald Reagan (R)</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m4">
-            <div class="card grey darken-2">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">2008 Election</span>
-                </div>
-                <div class="card-action">
-                    <a class="white-text" href="#">Barack Obama (D)</a><br>
-                    <a class="white-text" href="#">John McCain (R)</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="card grey darken-2">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">2016 Election</span>
-                </div>
-                <div class="card-action">
-                    <a class="white-text" href="#">Hillary Clinton (D)</a><br>
-                    <a class="white-text" href="#">Donald Trump (R)</a>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m4">
-            <div class="card grey darken-2">
-                <div class="card-content white-text">
-                    <span class="card-title center-align">Miscellaneous</span>
-                </div>
-                <div class="card-action">
-                    <a class="white-text" href="#">Bernie Sanders (D)</a><br>
-                    <a class="white-text" href="#">Al Gore (D)</a>
+                    <a class="white-text" ng-href="#!/candidate{{candidate.id}}">View doublespeak data</a><br>
                 </div>
             </div>
         </div>
