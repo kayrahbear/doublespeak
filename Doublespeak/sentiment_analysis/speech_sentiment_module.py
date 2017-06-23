@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 from nltk.probability import FreqDist
 from nltk.tokenize import word_tokenize, sent_tokenize
 
-from sentiment_analysis import sentiment_module as s
+import sentiment_module as s
 
 stop_words = stopwords.words("english")
 punctuation = list(string.punctuation)

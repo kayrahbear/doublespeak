@@ -1,5 +1,5 @@
 """
-WSGI config for Doublespeak project.
+WSGI config for DoublespeakAPI project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

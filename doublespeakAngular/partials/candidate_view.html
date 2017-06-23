@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h4>{{chosenCandidate.candidate_name}}</h4>
+            <p>Political Party: {{chosenCandidate.party_name}}</p>
+            <p>Campaign Year Analyzed : {{chosenCandidate.election_year}}</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h4 class="center-align">Short Bio</h4>
+            <p class="flow-text">{{chosenCandidate.short_bio}}</p>
+            <p>{{frequentWords}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div id="wordsCloud">
+            <word-cloud words="appCtrl.words" width="appCtrl.width" height="appCtrl.height" padding="5"
+                        rotate="appCtrl.rotate" on-click="appCtrl.wordClicked">
+            </word-cloud>
+        </div>
+    </div>
+</div>

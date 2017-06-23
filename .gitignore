@@ -2,4 +2,6 @@ Doublespeak/.idea
 Doublespeak/sentiment_analysis/pickled_algorithms
 doublespeakAngular/.idea
 doublespeakAngular/lib/node_modules
+doublespeakAngular/lib/bower_components
+.idea
 
