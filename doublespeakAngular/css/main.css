@@ -1,4 +1,4 @@
-body {
+html, body {
     background-color: #F5F5F6;
 }
 
@@ -6,8 +6,20 @@ p {
     color: #212121;
 }
 
+#cloud-dynamic {
+    width: 80%;
+    height: 400px;
+}
 
 .expl {
     height: 400px;
     width: auto;
+}
+
+.sentiment {
+    margin-top: 100px;
+}
+
+.topRow {
+    margin-top: 75px;
 }

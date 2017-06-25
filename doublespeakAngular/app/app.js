@@ -1,8 +1,8 @@
 'use strict';
 
-var app = angular.module("Doublespeak", ["ngRoute", "ngMaterial", 'angular-d3-word-cloud']);
+let app = angular.module("Doublespeak", ["ngRoute", "ngMaterial", "angular-jqcloud", "chart.js"]);
 
-//set up route paramaters
+//set up route parameters
 app.config(function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'partials/home_view.html',

@@ -25,5 +25,9 @@
     "materialize": "^1.0.0",
     "materialize-css": "^0.98.0",
     "sass": "^0.5.0"
+  },
+  "dependencies": {
+    "angular-chart.js": "^1.1.1",
+    "tc-angular-chartjs": "^2.1.4"
   }
 }

@@ -1,21 +1,159 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 col-sm-12">
-            <h4>{{chosenCandidate.candidate_name}}</h4>
-            <p>Political Party: {{chosenCandidate.party_name}}</p>
-            <p>Campaign Year Analyzed : {{chosenCandidate.election_year}}</p>
+    <div class="row topRow">
+        <div class="col s12 m4 offset-m1">
+            <h4>{{ chosenCandidate.candidate_name }}</h4>
+            <p>Political Party: {{ chosenCandidate.party_name }}</p>
+            <p>Campaign Year Analyzed : {{ chosenCandidate.election_year }}</p>
         </div>
-        <div class="col-md-6 col-sm-12">
-            <h4 class="center-align">Short Bio</h4>
-            <p class="flow-text">{{chosenCandidate.short_bio}}</p>
-            <p>{{frequentWords}}</p>
+        <div class="col s12 m6">
+            <p>{{ chosenCandidate.short_bio }}</p>
         </div>
     </div>
+    <div class="row center-align">
+        <a class="waves-effect waves-light btn" ng-click="wordsView()">View Most Frequent Words</a>
+        <a class="waves-effect waves-light btn" ng-click="setDoughtnutData(candidateSimpleSetiment)">View Simple
+            Sentiment</a>
+        <a class="waves-effect waves-light btn" ng-click="setEmotionalBar(candidateEmotion)">View Emotional Tone</a>
+        <a class="waves-effect waves-light btn" ng-click="setPersonalityBar(candidatePersonality)">View Personality</a>
+    </div>
+    <hr>
+</div>
+<div class="container" ng-if="mostWords">
     <div class="row">
-        <div id="wordsCloud">
-            <word-cloud words="appCtrl.words" width="appCtrl.width" height="appCtrl.height" padding="5"
-                        rotate="appCtrl.rotate" on-click="appCtrl.wordClicked">
-            </word-cloud>
+        <h4 class="center-align">Most Used Words</h4>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m8 center-align">
+            <jqcloud words="words" id="cloud-dynamic" auto-resize="true" steps="7"
+                     font-size="{from:0.09, to:0.04}"></jqcloud>
+        </div>
+        <div class="col s6 m4">
+            <div class="card grey darken-1">
+                <div class="card-content white-text">
+                    <p ng-repeat="word in frequentWords">{{ word }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="container" ng-if="simpleSentimant">
+    <div class="row">
+        <h4 class="center-align">Simple Sentiment Analysis</h4>
+    </div>
+    <div class="row">
+        <div class="col s6 m4 sentiment">
+            <div class="card grey darken-1">
+                <div class="card-content white-text">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Positive words:</td>
+                            <td>{{ candidateSimpleSetiment.positive_sentiment }}</td>
+                        </tr>
+                        <tr>
+                            <td>Negative words:</td>
+                            <td> {{ candidateSimpleSetiment.negative_sentiment }}</td>
+                        </tr>
+                        <tr>
+                            <td>Confidence:</td>
+                            <td>{{ candidateSimpleSetiment.sentiment_confidence }}%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8">
+            <canvas id="doughnut" class="chart chart-doughnut"
+                    chart-data="data" chart-labels="labels">
+            </canvas>
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="container" ng-if="emotionalTone">
+    <div class="row">
+        <h4 class="center-align">Emotional Tone</h4>
+    </div>
+    <div class="row">
+        <div class="col s12 m8">
+            <canvas id="bar" class="chart chart-bar"
+                    chart-data="data" chart-labels="labels">
+            </canvas>
+        </div>
+        <div class="col s6 m4">
+            <div class="card grey darken-1">
+                <div class="card-content white-text">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Anger:</td>
+                            <td>{{ candidateEmotion.anger_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Disgust:</td>
+                            <td> {{ candidateEmotion.disgust_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Fear:</td>
+                            <td>{{ candidateEmotion.fear_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Joy:</td>
+                            <td>{{ candidateEmotion.joy_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Sadness:</td>
+                            <td>{{ candidateEmotion.sadness_tone }}%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" ng-if="personalityTone">
+    <div class="row">
+        <h4 class="center-align">Personality Analysis</h4>
+    </div>
+    <div class="row">
+        <div class="col s6 m4">
+            <div class="card grey darken-1">
+                <div class="card-content white-text">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>Open:</td>
+                            <td>{{ candidatePersonality.openness_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Conscientious:</td>
+                            <td> {{ candidatePersonality.conscientiousness_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Extroverted:</td>
+                            <td>{{ candidatePersonality.extraversion_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Agreeable:</td>
+                            <td>{{ candidatePersonality.agreeableness_tone }}%</td>
+                        </tr>
+                        <tr>
+                            <td>Emotional Range:</td>
+                            <td>{{ candidatePersonality.emotional_range_tone }}%</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col s6 m8">
+            <canvas id="radar" class="chart chart-radar"
+                    chart-data="data" chart-labels="labels">
+            </canvas>
         </div>
     </div>
 </div>

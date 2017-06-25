@@ -27,7 +27,43 @@ app.factory("DjangoFactory", function ($q, $http) {
         });
     };
 
+    let getCandidateSentiment = (candidateId) => {
+        return $q(function (resolve, reject) {
+            $http.get(`http://localhost:8000/getsentimentbyid/${candidateId}`)
+                .then(function (sentiment) {
+                    resolve(sentiment.data);
+                })
+                .catch(function (error) {
+                    reject(error);
+                });
+        });
+    };
 
-    return {getCandidates, getSingleCandidate};
+    let getCandidateEmotion = (candidateId) => {
+        return $q(function (resolve, reject) {
+            $http.get(`http://localhost:8000/getemotionbyid/${candidateId}`)
+                .then(function (emotion) {
+                    resolve(emotion.data);
+                })
+                .catch(function (error) {
+                    reject(error);
+                });
+        });
+    };
+
+    let getCandidatePersonality = (candidateId) => {
+        return $q(function (resolve, reject) {
+            $http.get(`http://localhost:8000/getpersonalitybyid/${candidateId}`)
+                .then(function (personality) {
+                    resolve(personality.data);
+                })
+                .catch(function (error) {
+                    reject(error);
+                });
+        });
+    };
+
+
+    return {getCandidates, getSingleCandidate, getCandidateSentiment, getCandidatePersonality, getCandidateEmotion};
 
 });
